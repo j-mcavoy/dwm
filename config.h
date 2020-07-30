@@ -188,8 +188,9 @@ static Key keys[] = {
 { MODKEY,      XK_b,    togglebar,  {0} },
     /* { MODKEY|ShiftMask,    XK_b,    spawn,    SHCMD("") }, */
 { MODKEY,      XK_n,    spawn,    SHCMD("st -e nvim -c VimwikiIndex") },
-{ MODKEY|ShiftMask,    XK_n,    spawn,    SHCMD("st -e newsboat; pkill -RTMIN+6 dwmblocks") },
-{ MODKEY|ShiftMask,    XK_p,    spawn,    SHCMD("st -e podboat") },
+{ MODKEY|ShiftMask,    XK_n,    spawn,    SHCMD("st -e sh -c newsboat; pkill -RTMIN+6 dwmblocks") },
+{ MODKEY|ShiftMask,    XK_p,    spawn,    SHCMD("st -e sh -c podboat -a") },
+{ MODKEY|ShiftMask,    XK_v,    spawn,    SHCMD("st -e mpv ~/dl/youtube_videos") },
 { MODKEY,      XK_m,    spawn,    SHCMD("st -e ncmpcpp") },
 { MODKEY|ShiftMask,    XK_m,    spawn,    SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 
