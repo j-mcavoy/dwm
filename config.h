@@ -30,7 +30,7 @@ typedef struct {
     const void *cmd;
 } Sp;
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {"st", "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
+const char *spcmd2[] = {"st", "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "insect", NULL };
 static Sp scratchpads[] = {
     /* name          cmd  */
     {"spterm",      spcmd1},
@@ -206,7 +206,7 @@ static Key keys[] = {
 { MODKEY,      XK_Insert,  spawn,    SHCMD("notify-send \"📋 Clipboard contents:\" \"$(xclip -o -selection clipboard)\"") },
 
 { MODKEY,      XK_F1,    spawn,    SHCMD("groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -") },
-{ MODKEY,      XK_F2,    spawn,    SHCMD("tutorialvids") },
+{ MODKEY,      XK_F2,    spawn,    SHCMD("bluetoothctl connect C0:28:8D:B3:A0:03") },
 { MODKEY,      XK_F3,    spawn,    SHCMD("displayselect") },
 { MODKEY,      XK_F4,    spawn,    SHCMD("st -e pulsemixer; kill -44 $(pidof dwmblocks)") },
 { MODKEY,      XK_F5,    xrdb,    {.v = NULL } },
@@ -239,7 +239,7 @@ static Key keys[] = {
 { 0, XF86XK_AudioForward,  spawn,    SHCMD("playerctl position 10+") },
     //  { 0, XF86XK_AudioMedia,    spawn,    SHCMD("st -e ncmpcpp") },
 { 0, XF86XK_PowerOff,    spawn,    SHCMD("sysact") },
-{ 0, XF86XK_Calculator,    spawn,    SHCMD("st -e bc -l") },
+{ 0, XF86XK_Calculator,    spawn,    SHCMD("st -e insect") },
 { 0, XF86XK_Sleep,    spawn,    SHCMD("sudo -A zzz") },
 { 0, XF86XK_WWW,    spawn,    SHCMD("$BROWSER") },
 { 0, XF86XK_DOS,    spawn,    SHCMD("st") },
